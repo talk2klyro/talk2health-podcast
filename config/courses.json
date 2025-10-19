@@ -1,0 +1,38 @@
+{
+  "featured": [1, 2],
+  "courses": [
+    {
+      "id": 1,
+      "title": "JAMB Maths Intensive",
+      "subject": "Mathematics",
+      "tutorId": 101,
+      "price": 2500,
+      "schedule": "Mon & Wed — 4pm - 6pm",
+      "description": "Exam-focused JAMB maths class with weekly mocks.",
+      "short": "Exam-focused JAMB maths class with weekly mocks.",
+      "classroomUrl": "https://classroom.google.com/share/jamb-maths"
+    },
+    {
+      "id": 2,
+      "title": "WAEC Physics Crash",
+      "subject": "Physics",
+      "tutorId": 102,
+      "price": 3000,
+      "schedule": "Tue & Thu — 5pm - 7pm",
+      "description": "Concept-driven physics lessons with practical examples.",
+      "short": "Concept-driven physics lessons with practical examples.",
+      "classroomUrl": ""
+    },
+    {
+      "id": 3,
+      "title": "Primary English — Reading Club",
+      "subject": "English",
+      "tutorId": 103,
+      "price": 1500,
+      "schedule": "Sat — 9am - 11am",
+      "description": "Fun reading club to build literacy and confidence.",
+      "short": "Fun reading club to build literacy and confidence.",
+      "classroomUrl": "https://classroom.google.com/share/reading-club"
+    }
+  ]
+}
