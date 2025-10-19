@@ -1,0 +1,16 @@
+{
+  "currency": "₦",
+  "paymentMethods": ["flutterwave", "paystack"],
+  "defaultEmail": "student@example.com",
+  "enrollmentFlows": {
+    "simple": true,
+    "advanced": true
+  },
+  "flutterwave": {
+    "links": {
+      "maths": "https://flutterwave.com/pay/maths-course",
+      "physics": "https://flutterwave.com/pay/physics-course",
+      "english": "https://flutterwave.com/pay/english-course"
+    }
+  }
+}
