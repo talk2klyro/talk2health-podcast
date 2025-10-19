@@ -1,0 +1,40 @@
+{
+  "site": {
+    "name": "EduBridge",
+    "tagline": "Connect tutors and learners — fast, secure, beautiful.",
+    "description": "EduBridge helps schools, tutors, and parents manage classes, collect payments and keep records.",
+    "contact": {
+      "whatsapp": "2349012728201",
+      "email": "hello@edubridge.com",
+      "phone": "+234 901 272 8201"
+    },
+    "features": {
+      "darkMode": true,
+      "googleClassroom": true,
+      "search": true,
+      "payments": true
+    }
+  },
+  "hero": {
+    "title": "Connect tutors and learners — fast, secure, beautiful.",
+    "description": "EduBridge helps schools, tutors, and parents manage classes, collect payments and keep records — built with JSON, JotForm & Paystack.",
+    "primaryButton": "Browse Classes",
+    "secondaryButton": "Create / Enroll",
+    "primaryLink": "classes.html",
+    "secondaryLink": "enroll.html"
+  },
+  "navigation": {
+    "links": [
+      {"name": "Home", "url": "index.html"},
+      {"name": "Classes", "url": "classes.html"},
+      {"name": "Tutors", "url": "tutors.html"},
+      {"name": "Enroll", "url": "enroll.html"},
+      {"name": "Contact", "url": "contact.html"}
+    ],
+    "showGoogleClassroom": true,
+    "showDarkMode": true
+  },
+  "footer": {
+    "text": "© [year] EduBridge — Smart Class Management Platform"
+  }
+}
