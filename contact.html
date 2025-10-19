@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — EduBridge</title>
+  <meta name="description" content="Reach out to EduBridge via WhatsApp for support, inquiries, or feedback.">
+  <meta name="theme-color" content="#3aa76d" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <script type="module" src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">EduBridge</a>
+      <button class="hamburger" aria-label="Toggle menu" onclick="document.querySelector('.main-nav').classList.toggle('open')">☰</button>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="classes.html">Classes</a>
+        <a href="tutors.html">Tutors</a>
+        <a href="enroll.html">Enroll</a>
+        <a href="contact.html">Contact</a>
+        <button id="toggle-dark" class="btn btn-secondary" title="Toggle dark mode">🌓</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Contact Us via WhatsApp</h1>
+    <p>Select a topic below and type your message. We'll route it directly to WhatsApp with your message pre-filled.</p>
+
+    <div class="classes-grid">
+      <div class="card">
+        <h3>Enrollment Help</h3>
+        <textarea placeholder="I need help enrolling in..." class="msg-input"></textarea>
+        <a class="btn btn-primary whatsapp-btn" target="_blank">Send via WhatsApp</a>
+      </div>
+
+      <div class="card">
+        <h3>Payment Issue</h3>
+        <textarea placeholder="I made a payment but..." class="msg-input"></textarea>
+        <a class="btn btn-primary whatsapp-btn" target="_blank">Send via WhatsApp</a>
+      </div>
+
+      <div class="card">
+        <h3>Class Recommendation</h3>
+        <textarea placeholder="Can you recommend a class for..." class="msg-input"></textarea>
+        <a class="btn btn-primary whatsapp-btn" target="_blank">Send via WhatsApp</a>
+      </div>
+
+      <div class="card">
+        <h3>General Inquiry</h3>
+        <textarea placeholder="I have a question about..." class="msg-input"></textarea>
+        <a class="btn btn-primary whatsapp-btn" target="_blank">Send via WhatsApp</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year5"></span> EduBridge</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year5').textContent = new Date().getFullYear();
+    document.getElementById('toggle-dark').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+
+    const buttons = document.querySelectorAll('.whatsapp-btn');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', e => {
+        const card = btn.closest('.card');
+        const input = card.querySelector('.msg-input').value.trim();
+        const encoded = encodeURIComponent(input || "Hello, I need help with EduBridge.");
+        const phone = '2349012728201';
+        btn.href = `https://wa.me/${phone}?text=${encoded}`;
+      });
+    });
+  </script>
+</body>
+</html>
