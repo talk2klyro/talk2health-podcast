@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="EduBridge — Smart Class Management & Enrollment SaaS" />
+  <meta name="theme-color" content="#3aa76d" />
+  <title>EduBridge — Smart Class Management</title>
+
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <script type="module" src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">EduBridge</a>
+      <button class="hamburger" aria-label="Toggle menu" onclick="document.querySelector('.main-nav').classList.toggle('open')">☰</button>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="classes.html">Classes</a>
+        <a href="tutors.html">Tutors</a>
+        <a href="enroll.html">Enroll</a>
+        <a href="contact.html">Contact</a>
+        <button id="gc-nav-btn" class="btn btn-outline" title="Share to Google Classroom">Google Classroom</button>
+        <button id="toggle-dark" class="btn btn-secondary" title="Toggle dark mode">🌓</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-left">
+        <h1 id="hero-heading">Connect tutors and learners — fast, secure, beautiful.</h1>
+        <p>EduBridge helps schools, tutors, and parents manage classes, collect payments and keep records — built with JSON, JotForm & Paystack.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="classes.html">Browse Classes</a>
+          <a class="btn btn-secondary" href="enroll.html">Create / Enroll</a>
+        </div>
+      </div>
+      <div class="hero-right" aria-hidden="true">
+        <img loading="lazy" alt="Edu illustration" src="assets/images/hero-illustration.svg">
+      </div>
+    </section>
+
+    <section aria-label="Featured classes">
+      <h2>Featured Classes</h2>
+      <div id="featured-grid" class="classes-grid" role="list">
+        <p>Loading featured classes...</p>
+      </div>
+    </section>
+
+    <section aria-label="Top tutors">
+      <h2>Top Tutors</h2>
+      <div id="tutors-grid" class="tutors-grid">
+        <p>Loading top tutors...</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> EduBridge — Smart Class Management Platform</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('toggle-dark').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+</html>
